@@ -1,1 +1,15 @@
 # Add CI specific values here
+aissemble-policy-decision-point-chart:
+  image:
+    imagePullPolicy: IfNotPresent
+    dockerRepo: ""
+  service:
+    spec:
+      type: LoadBalancer
+      ports:
+        - name: rest-api
+          port: 8080
+          targetPort: 8080
+      selector:
+        app.kubernetes.io/instance: policy-decision-point
+        app.kubernetes.io/name: policy-decision-point
