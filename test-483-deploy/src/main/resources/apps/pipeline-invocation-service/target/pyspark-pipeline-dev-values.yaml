@@ -1,3 +1,5 @@
+metadata:
+    namespace: argocd
 sparkApp:
     spec:
       image: "test-483-spark-worker-docker:latest"
